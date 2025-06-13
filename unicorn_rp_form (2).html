@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de Recrutement RP - UNICORN</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    /* Fond animé */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #8e2de2, #4a00e0, #a4508b, #5f0a87);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      z-index: -1;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1, h2 {
+      text-align: center;
+      text-shadow: 1px 1px 3px #000;
+    }
+    form {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #000;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="number"], textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .submit-btn {
+      background: #ff00cc;
+      color: white;
+      padding: 15px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+    }
+    .submit-btn:hover {
+      background: #e600b8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🦄 UNICORN RP - Recrutement</h1>
+  <form action="https://formsubmit.co/victoirep21200@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://google.com"> <!-- à personnaliser -->
+
+    <h2>📜 Identité RP</h2>
+    <label>Nom RP :</label>
+    <input type="text" name="nom_rp" required>
+
+    <label>Prénom RP :</label>
+    <input type="text" name="prenom_rp" required>
+
+    <label>Âge RP :</label>
+    <input type="text" name="age_rp" required>
+
+    <label>Nationalité RP :</label>
+    <input type="text" name="nationalite_rp">
+
+    <label>Profession actuelle :</label>
+    <input type="text" name="profession_rp">
+
+    <label>Casier judiciaire RP :</label>
+    <textarea name="casier_rp"></textarea>
+
+    <h2>🧠 Profil Joueur</h2>
+    <label>Pseudo/Prénom IRL :</label>
+    <input type="text" name="pseudo_irl" required>
+
+    <label>Âge IRL :</label>
+    <input type="number" name="age_irl" required>
+
+    <label>Expérience RP :</label>
+    <textarea name="experience_rp"></textarea>
+
+    <label>Heures de jeu par semaine :</label>
+    <select name="heures_jeu">
+      <option>- Moins de 5h</option>
+      <option>5-10h</option>
+      <option>10-20h</option>
+      <option>20h+</option>
+    </select>
+
+    <label>Niveau de RP :</label>
+    <select name="niveau_rp">
+      <option>Débutant</option>
+      <option>Intermédiaire</option>
+      <option>Confirmé</option>
+      <option>Divin</option>
+    </select>
+
+    <label>Micro fonctionnel :</label>
+    <select name="micro">
+      <option>Oui</option>
+      <option>Non</option>
+      <option>J’utilise les signaux de fumée</option>
+    </select>
+
+    <h2>🎭 Mise en situation RP</h2>
+    <label>Tu croises un agent rival en pleine livraison illégale sur notre territoire. Que fais-tu ?</label>
+    <textarea name="situation"></textarea>
+
+    <h2>💼 Motivation</h2>
+    <label>Pourquoi veux-tu rejoindre UNICORN ?</label>
+    <textarea name="motivation"></textarea>
+
+    <label>Quels rôles aimes-tu incarner ?</label>
+    <textarea name="roles" placeholder="Ex : Hacker, mascotte disco, manipulateur de l’ombre..."></textarea>
+
+    <label>Atouts pour l’organisation :</label>
+    <textarea name="atouts"></textarea>
+
+    <h2>📣 Dernier mot</h2>
+    <label>Un message final, une prière, un cri du cœur ?</label>
+    <textarea name="dernier_mot"></textarea>
+
+    <button class="submit-btn" type="submit">Envoyer ma candidature</button>
+  </form>
+</body>
+</html>
